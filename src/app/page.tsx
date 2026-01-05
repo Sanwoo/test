@@ -1,6 +1,16 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    console.log('NEXT_PUBLIC_VERCEL_ENV', process.env.NEXT_PUBLIC_VERCEL_ENV)
+    console.log('NEXT_PUBLIC_VERCEL_TARGET_ENV', process.env.NEXT_PUBLIC_VERCEL_TARGET_ENV)
+    console.log('NODE_ENV', process.env.NODE_ENV)
+    console.log('VERCEL_ENV', process.env.VERCEL_ENV)
+    console.log('VERCEL_TARGET_ENV', process.env.VERCEL_TARGET_ENV)
+  }, [])
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
